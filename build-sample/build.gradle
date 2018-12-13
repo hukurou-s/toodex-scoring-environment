@@ -1,4 +1,17 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.2'
+    testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.2'
+}
+
 mainClassName = 'sample.HelloWorld'
